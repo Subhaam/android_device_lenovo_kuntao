@@ -97,6 +97,10 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # CNE | DPM
 BOARD_USES_QCNE := true
 
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := device/lenovo/kuntao/cryptfs_hw
+
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
