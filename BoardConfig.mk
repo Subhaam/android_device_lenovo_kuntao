@@ -192,6 +192,9 @@ TARGET_USES_INTERACTION_BOOST := true
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
+
 # Properties
 TARGET_SYSTEM_PROP += device/lenovo/kuntao/system.prop
 
