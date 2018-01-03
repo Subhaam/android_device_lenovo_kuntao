@@ -193,6 +193,7 @@ TARGET_USES_INTERACTION_BOOST := true
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Power
+TARGET_PROVIDES_POWERHAL := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 
 # Properties
