@@ -195,6 +195,7 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 # Power
 TARGET_PROVIDES_POWERHAL := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
+TARGET_HAS_NO_WIFI_STATS := true
 
 # Properties
 TARGET_SYSTEM_PROP += device/lenovo/kuntao/system.prop
