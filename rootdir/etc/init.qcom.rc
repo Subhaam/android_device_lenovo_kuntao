@@ -1217,13 +1217,13 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
    start vendor.imsrcsservice
 
-service rmt_storage /vendor/bin/rmt_storage
+service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     shutdown critical
     ioprio rt 0
 
-service tftp_server /vendor/bin/tftp_server
+service vendor.tftp_server /vendor/bin/tftp_server
    class core
    user root
 
