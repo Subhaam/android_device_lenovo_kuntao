@@ -30,6 +30,12 @@ TARGET_USES_64_BIT_BINDER := true
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := P2a42,kuntao_row,p2,p2a42,kuntao
 
+# Audio/media/display
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
+TARGET_QCOM_BLUETOOTH_VARIANT := caf-msm8996
+
 # Audio
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -64,7 +70,6 @@ AUDIO_FEATURE_ENABLED_WMA_OFFLOAD  := true
 AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
-BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 0
 USE_XML_AUDIO_POLICY_CONF := 0
@@ -153,10 +158,6 @@ TARGET_KERNEL_CONFIG := kuntao_defconfig
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Lineage Hardware
-BOARD_HARDWARE_CLASS += \
-    device/lenovo/kuntao/lineagehw
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
@@ -205,8 +206,8 @@ USE_OPENGL_RENDERER := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true

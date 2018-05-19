@@ -16,10 +16,14 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from kuntao device
 $(call inherit-product, device/lenovo/kuntao/device.mk)
+
+# Inherit from Omni custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device vendor
 $(call inherit-product-if-exists, vendor/lenovo/kuntao/kuntao-vendor.mk)
@@ -27,7 +31,17 @@ $(call inherit-product-if-exists, vendor/lenovo/kuntao/kuntao-vendor.mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_DEVICE := kuntao
-PRODUCT_NAME := full_kuntao
+PRODUCT_NAME := omni_kuntao
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo P2a42
 PRODUCT_MANUFACTURER := lenovo
+BOARD_VENDOR := Lenovo
+
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+
+# Override build properties.
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="kuntao_row-user 7.0 NRD90N P2a42_S244_170725_ROW release-keys"
+
+BUILD_FINGERPRINT := Lenovo/kuntao_row/P2a42:7.0/NRD90N/P2a42_S244_170725_ROW:user/release-keys
+
