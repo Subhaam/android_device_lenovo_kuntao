@@ -63,10 +63,10 @@ etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 etc/drc/drc_cfg_5.1.txt
 etc/drc/drc_cfg_AZ.txt
 
-# Bluetooth
-bin/btnvtool:vendor/bin/btnvtool
-bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
-bin/wcnss_filter:vendor/bin/wcnss_filter
+# Bluetooth - from bardock
+vendor/bin/wcnss_filter|adee628bd5c48ab1ceb87fb3224fda1442760fb4
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|0a9c71d0c7299a87c9f0876334268f0ef1f4ab18
+vendor/lib64/libbtnv.so|21c928e2d68980008ce8d8d1312ded932e79768d
 
 # Bluetooth firmware
 etc/firmware/nvm_tlv_1.3.bin
