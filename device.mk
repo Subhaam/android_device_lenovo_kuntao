@@ -129,7 +129,7 @@ PRODUCT_COPY_FILES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    LenovoDoze
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
