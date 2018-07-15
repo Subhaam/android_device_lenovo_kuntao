@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Lenovo P2"
+#define BTM_DEF_LOCAL_NAME   "Lenovo P2a42"
 #define BLUETOOTH_QTI_SW TRUE
 
 // Disables read remote device feature
